@@ -1,22 +1,31 @@
 {
 	"songs": [
-		["Bopeebo", "dad", [146, 113, 253]],
-		["Fresh", "dad", [146, 113, 253]],
-		["Dad Battle", "dad", [146, 113, 253]]
+		[
+			"phantasm",
+			"corruptedBF",
+			[
+				99,
+				0,
+				40
+			]
+		]
 	],
-
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "hard",
 	"weekCharacters": [
 		"dad",
 		"bf",
 		"gf"
 	],
-	"weekBackground": "stage",
-
-	"storyName": "Daddy Dearest",
+	"storyName": "e",
+	"weekName": "Corruption Nightmare",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": true,
 	"weekBefore": "tutorial",
-	"weekName": "Week 1",
-	"startUnlocked": true,
-
-	"hideStoryMode": false,
-	"hideFreeplay": false
+	"startUnlocked": true
 }
