@@ -889,16 +889,6 @@ class PlayState extends MusicBeatState
 		healthBar.visible = !ClientPrefs.hideHud;
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
-		
-		//Only Mobile Users have watermark
-		#if mobile
-		watermark = new FlxText(0, 700, "PORTED BY NT846", 20);
-		watermark.scrollFactor.set();
-		watermark.setFormat("assets/fonts/vcr.ttf", 20, FlxColor.WHITE, LEFT, OUTLINE, FlxColor.BLACK);
-		watermark.borderSize = 1.25;
-		watermark.alpha = 0;
-		this.add(watermark);
-		#end
 
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - (iconP1.height / 2);
@@ -910,6 +900,13 @@ class PlayState extends MusicBeatState
 		iconP2.visible = !ClientPrefs.hideHud;
 		add(iconP2);
 		reloadHealthBarColors();
+		
+		var creditText:FlxText = new FlxText(876, 648, 348);
+        creditText.text = 'PORTED BY\nNT846';
+        creditText.setFormat(Paths.font("vcr.ttf"), 30, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+		creditText.cameras = [camHUD];
+        creditText.scrollFactor.set();
+        add(creditText);
 
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
